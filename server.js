@@ -12,12 +12,12 @@ app.use(cors())
  
 app.use('/',userRouter)
 // app.use(isLoggedIn)
-app.use('/',isLoggedIn,postRouter)
+// app.use('/',isLoggedIn,postRouter)
 
 connectDb().then(()=>{
     try {
 
-        app.listen(8080,()=>{
+        app.listen(process.env.PORT,()=>{
             console.log("listening to port 8080")
         })
         
