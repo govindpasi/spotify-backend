@@ -3,8 +3,8 @@ const connectDb = require('./config/db');
 
 const cors =require('cors');
 const userRouter = require('./routes/user.route');
-const postRouter = require('./routes/post.route');
-const isLoggedIn = require('./middlewares/auth');
+// const postRouter = require('./routes/post.route');
+// const isLoggedIn = require('./middlewares/auth');
 
 require('dotenv').config();
 
