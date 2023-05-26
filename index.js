@@ -8,6 +8,8 @@ const isLoggedIn = require('./middlewares/auth');
 
 require('dotenv').config();
 
+const PORT =process.env.PORT || 8080
+
 const app =express();
 
 app.use(express.json());
@@ -21,7 +23,7 @@ connectDb().then(()=>{
     try {
 
         app.listen(process.env.PORT,()=>{
-            console.log("listening to port 8080")
+            console.log(`listening to port ${PORT}`)
         })
         
     } catch (error) {
